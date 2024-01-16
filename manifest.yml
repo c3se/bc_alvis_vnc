@@ -1,0 +1,9 @@
+---
+name: VNC
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch a VNC server on a login node.
+
+  [bc_alvis_vnc]: https://github.com/c3se/bc_alvis_vnc

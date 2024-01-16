@@ -1,0 +1,15 @@
+---
+cluster:
+  - "alvis1"
+form:
+  - tb_logdir
+  - tb_extra_args
+attributes:
+  tb_logdir:
+    label: "VNC server logdir"
+    required: false
+    data-filepicker: true
+    data-target-file-type: dirs  # Valid values are: files, dirs, or both
+    help: "The directory to store VNC logs."
+  tb_extra_args:
+    label: "Additional VNC server arguments (optional)"
