@@ -1,3 +1,24 @@
 #!/usr/bin/bash
+# Note that after.sh, before.sh.erb and script.sh.erb all run inside the
+# container specified in submit.yml.erb. This script is basically the same
+# script used by the native OOD Dashboard Application. This script starts an
+# desktop, at the moment, only xfce, but that is easily customizable.
 
-echo "$(date) I should start a VNC-server"
+export LOGDIR="$HOME/.local/share/bc_alvis_vnc"
+export XFCE_LOG_FILE="${LOGDIR}/xfce.log"
+
+# Change working directory to user's home directory
+EXECDIR="$(pwd)"
+cd "${HOME}"
+
+# Ensure that the user's configured login shell is used
+export SHELL="$(getent passwd $USER | cut -d: -f7)"
+
+# Reset module environment (may require login shell for some HPC clusters)
+module purge && module restore
+
+# Setting the DISPLAY is REQUIRED for xfce-session to start
+# We read the display from the logfile and pick the last match
+display="$(grep -Poh "started on display \K.*" "${LOGDIR}/bc_alvis_vnc.log" | tail -n1)"
+export DISPLAY="$display"
+${EXECDIR}/startxfce.sh &>> "$XFCE_LOG_FILE"
