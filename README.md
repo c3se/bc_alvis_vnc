@@ -3,6 +3,9 @@
 
 Interactive App Plugin for launching a VNC Server at [Alvis OnDemand](https://portal.c3se.chalmers.se).
 
+This application is based on what Ondemand calls [Linux host
+adapter](https://discourse.openondemand.org/t/linux-host-adapter-connect-to-localhost/2536).
+
 ## Prerequisites
 
 ## Install
