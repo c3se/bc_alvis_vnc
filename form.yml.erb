@@ -2,7 +2,7 @@
 cluster:
   - "alvis1"
 form:
-  - tb_extra_args
+  - desktop
 attributes:
   vnc_logdir:
     label: "VNC server logdir"
@@ -10,5 +10,7 @@ attributes:
     data-filepicker: true
     data-target-file-type: dirs  # Valid values are: files, dirs, or both
     help: "The directory to store VNC logs."
-  tb_extra_args:
-    label: "Additional VNC server arguments (optional)"
+  desktop:
+    widget: "select"
+    options:
+      - "xfce"
