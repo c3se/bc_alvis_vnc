@@ -20,6 +20,8 @@ change_passwd ()
   (
     umask 077
     echo -ne "${password}\n${spassword}" | vncpasswd -f > "vnc.passwd"
+    sed -i "s/^password:.*/password: $password/" connection.yml
+    sed -i "s/^spassword:.*/spassword: $spassword/" connection.yml
   )
 }
 
