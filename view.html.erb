@@ -8,5 +8,15 @@
  <input type="hidden" name="path" id="path" value="rnode/<%= host %>/<%= port %>/websockify" autocomplete="off">
  <input type="hidden" name="resize" id="resize" value="remote" autocomplete="off">
  <input type="hidden" name="password" id="password" value="<%= password %>" autocomplete="off">
- <input type="submit" name="commit" value="Launch Desktop" class="btn btn-primary" formtarget="_blank" data-disable-with="Connect to VNC Server">
+
+ <div class="row">
+    <div class="col-sm-6">
+        <div class="form-group"><label for="compression">Compression</label><input class="form-control custom-range" type="range" min="0" max="9" value="6" name="compression" id="compression"><small class="form-text text-muted">0 (low) to 9 (high)</small></div>
+    </div>
+    <div class="col-sm-6">
+        <div class="form-group"><label for="quality">Image Quality</label><input class="form-control custom-range" type="range" min="0" max="9" value="2" name="quality" id="quality"><small class="form-text text-muted">0 (low) to 9 (high)</small></div>
+    </div>
+ </div>
+
+ <input type="submit" name="commit" value="Connect to VNC Server" class="btn btn-primary" formtarget="_blank" data-disable-with="Connect to VNC Server">
 </form>
