@@ -4,6 +4,13 @@ category: Interactive Apps
 subcategory: Servers
 role: batch_connect
 description: |
-  This app will launch a VNC server on a login node.
+  This app will launch a VNC server on a **login node**.
+
+  Note, you're limited to one instance at the time. If the "Launch" button is
+  disabled please refer to your active session found under _"My Interactive
+  Sessions"_ above.
+  
+  _There might be a slight delay where the button is disabled while
+  the check for active sessions is underway._
 
   [bc_alvis_vnc]: https://github.com/c3se/bc_alvis_vnc
