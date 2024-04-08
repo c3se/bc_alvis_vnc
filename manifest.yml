@@ -1,7 +1,8 @@
 ---
-name: VNC
+name: Desktop (Login)
+icon: fa://desktop
 category: Interactive Apps
-subcategory: Servers
+subcategory: Desktops
 role: batch_connect
 description: |
   This app will launch a VNC server on a **login node**.
