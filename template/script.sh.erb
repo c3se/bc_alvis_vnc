@@ -7,6 +7,8 @@
 export LOGDIR="$HOME/.local/share/bc_alvis_vnc"
 export XFCE_LOG_FILE="${LOGDIR}/xfce.log"
 
+unset APPTAINER_BIND SINGULARITY_BIND
+
 # Change working directory to user's home directory
 EXECDIR="$(pwd)"
 cd "${HOME}"
