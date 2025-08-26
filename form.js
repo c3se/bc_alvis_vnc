@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
    description_element.innerHTML = `
      <div> 
      <p>
-     Login nodes runs desktop services in the RDP protocol, you can connect
-     to it with different clients (details in our <a href="${help_link}">documentation</a>).
-     Or directly throught one of the following links:
+     Login nodes on ${cluster} run desktop services in the RDP protocol, you can connect
+     to them with different clients (details in our <a href="${help_link}">documentation</a>).
+     Or directly through one of the following links:
      <p>
      <ui>
        ${links_content}

@@ -1,6 +1,13 @@
+<%
+  if ENV["OOD_DASHBOARD_TITLE"]=="Alvis OnDemand"
+     cluster = "alvis1"
+  else
+     cluster = "vera3"
+  end
+%>
 ---
 cluster:
-  - "alvis1"
+  - "<%= cluster %>"
 form:
   - desktop
 attributes:
