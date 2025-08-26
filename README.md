@@ -1,25 +1,16 @@
 ![Alvis](alvis_logo.svg)
 # Batch Connect - Alvis OnDemand VNC
 
-Interactive App Plugin for launching a VNC Server at [Alvis OnDemand](https://portal.c3se.chalmers.se).
+## History 
 
-This application is based on what Ondemand calls [Linux host
-adapter](https://discourse.openondemand.org/t/linux-host-adapter-connect-to-localhost/2536).
+In the past We served VNC sessions login nodes and use this app to connect
+ to them at [Alvis OnDemand](https://portal.c3se.chalmers.se). 
+Now we have switched to the better option of runnig RDP on the nodes. 
+The app is now just a placeholder that links to the new services 
+(while more smooth authentication mechanism might be worked on
+in the future).
 
-## Prerequisites
-
-## Install
-The app itself is pretty much self-contained and should only need to be placed
-as e.g. `/var/www/ood/apps/sys/bc_alvis_vnc`.
-
-```
-$ cd /var/www/ood/apps/sys/
-$ git clone https://github.com/c3se/bc_alvis_vnc.git
-```
-
-## Customizations
-You can customize how VNC server is started by overriding configuration in
-`~/portal/vnc/bc_alvis_vnc.env`.
-
-## Debugging
-Logs gets written to `$HOME/.local/share/bc_alvis_vnc/`.
+If you are here for the VNC-on-login-node app based on 
+[Linux host adapter](https://discourse.openondemand.org/t/linux-host-adapter-connect-to-localhost/2536),
+ check out the `legacy` branch. 
+The work with the VNC app are contributed mostly by Arvid and Linus from UPPMAX.
